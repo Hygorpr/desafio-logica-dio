@@ -9,21 +9,32 @@
 //Se XP for entre 9.001 e 10.000= Imortal
 //Se XP for maior ou igual a 10.001 = Radiante
 
-//## Saída
+//Ao final deve se exibir uma mensagem:
+//"O Herói de nome **{nome}** está no nível de **{nivel}**"
+
+ 
 
 let nomeDoHeroi = "Leandrudison";
 
 let xpDoHeroi = 7500;
 
 let rank = [
-    [1.000, "Ferro"]
-    [2.001, "Bronze"]
-    [5.001, "Prata"]
-    [7.001, "Ouro"]
-    [8.001, "Platina"]
-    [9.001, "Ascendente"]
-    [10.000, "Imortal"]
-    [10.001, "Radiante"]
+    [1000, "Ferro"],
+    [2001, "Bronze"],
+    [5001, "Prata"],
+    [7001, "Ouro"],
+    [8001, "Platina"],
+    [9001, "Ascendente"],
+    [10000, "Imortal"],
+    [10001, "Radiante"]
 ];
 
-let mensagem = "";
+
+for (let i = 0; i < rank.length; i++) {
+    if (xpDoHeroi < rank[i][0]) {
+        nivel = rank[i][1];
+        break;
+    }
+}
+
+console.log("Ó Herói de nome " + nomeDoHeroi + " está no nível de" + nivel )
